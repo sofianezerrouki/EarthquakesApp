@@ -15,11 +15,11 @@ import java.util.ArrayList;
  * Created by sof on 28/03/2019.
  */
 
-public class EarthAdapter extends ArrayAdapter<Earth> {
+public class EarthAdapter extends ArrayAdapter<Earthquake> {
 
     int color;
 
-    public EarthAdapter(Activity context, ArrayList<Earth> objects,int color) {
+    public EarthAdapter(Activity context, ArrayList<Earthquake> objects,int color) {
         super(context, 0, objects);
         this.color = color;
     }
@@ -32,7 +32,7 @@ public class EarthAdapter extends ArrayAdapter<Earth> {
                     R.layout.list_item, parent, false);
         }
 
-        Earth currentEarthQuake = getItem(position);
+        Earthquake currentEarthQuake = getItem(position);
 
         TextView magTextView = (TextView) listItemView.findViewById(R.id.mag);
 
